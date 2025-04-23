@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "concert-pay",
   "private": true,
   "scripts": {
     "build": "turbo run build",
