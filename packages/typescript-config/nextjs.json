@@ -1,12 +1,24 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Next.js",
   "extends": "./base.json",
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
     "plugins": [{ "name": "next" }],
     "module": "ESNext",
+    "strict": false,
+    "incremental": true,
     "moduleResolution": "Bundler",
-    "allowJs": true,
+    "resolveJsonModule": true,
     "jsx": "preserve",
-    "noEmit": true
-  }
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./*"],
+      "@exemplaryai/*": ["../../packages/*"]
+    },
+    "strictNullChecks": false,
+    "target": "ES2022"
+  },
+  "exclude": ["node_modules"]
 }
