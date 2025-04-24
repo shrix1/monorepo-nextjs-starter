@@ -1,84 +1,124 @@
-# Turborepo starter
+# Monorepo-nextjs-starter
 
-This Turborepo starter is maintained by the Turborepo core team.
+A modern web application built with Next.js, React 19, and a comprehensive UI component library.
 
-## Using this example
+## Tech Stack
 
-Run the following command:
+- **Framework**: [Next.js 15](https://nextjs.org/) with Turbopack
+- **UI Library**: Custom UI components built with [Radix UI](https://www.radix-ui.com/) primitives
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Package Manager**: [pnpm](https://pnpm.io/)
+- **Monorepo Tool**: [Turborepo](https://turbo.build/)
+- **Code Format + Linting**: [Biome](https://biomejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
 
-```sh
-npx create-turbo@latest
-```
+## Project Structure
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+This project is organized as a monorepo using Turborepo, with the following structure:
 
 ```
-cd my-turborepo
-pnpm build
+monorepo-nextjs-starter/
+├── apps/
+│   └── web/               # Next.js web application
+├── packages/
+│   ├── ui/                # Shared UI component library
+│   ├── tailwind-config/   # Shared Tailwind configuration
+│   └── typescript-config/ # Shared TypeScript configuration
 ```
 
-### Develop
+## Getting Started
 
-To develop all apps and packages, run the following command:
+### Prerequisites
 
+- Node.js >= 18
+- pnpm >= 9.0.0
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd monorepo-nextjs-starter
+
+# Install dependencies
+pnpm install
 ```
-cd my-turborepo
+
+### Development
+
+```bash
+# Start the development server
 pnpm dev
 ```
 
-### Remote Caching
+This will start the Next.js development server with Turbopack. Visit http://localhost:3000 to see the application.
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+### Building for Production
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```bash
+# Build all packages and applications
+pnpm build
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### Linting
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
+```bash
+# Run linting across all packages and applications
+pnpm lint
 ```
-npx turbo link
+
+### Type Checking
+
+```bash
+# Run type checking across all packages and applications
+pnpm check-types
 ```
 
-## Useful Links
+## UI Component Library
 
-Learn more about the power of Turborepo:
+The project includes a comprehensive UI component library built with Radix UI primitives and styled with Tailwind CSS. The component library is located in the `packages/ui` directory and includes the following components:
 
-- [Tasks](https://turbo.build/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/docs/reference/command-line-reference)
+- Accordion
+- Alert
+- Alert Dialog
+- Avatar
+- Badge
+- Breadcrumb
+- Button
+- Calendar
+- Card
+- Checkbox
+- Command
+- Dialog
+- Dropdown Menu
+- Input
+- Label
+- Popover
+- Progress
+- Radio Group
+- Scroll Area
+- Select
+- Separator
+- Sheet
+- Sidebar
+- Skeleton
+- Slider
+- Switch
+- Table
+- Tabs
+- Textarea
+- Tooltip
+- and more...
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Turborepo](https://turbo.build/)
+- [shadcn/ui](https://ui.shadcn.com/) (inspiration for the UI component library)
